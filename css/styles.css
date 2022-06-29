@@ -1,1 +1,264 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    /*font-family: 'Amatic SC', cursive;*/
+}
+
+/*HEADER*/
+header {
+    float: left; 
+    background-color: black;
+    width: 20%;
+}
+
+header img {
+    width: 30%;  
+}
+
+/*NAV*/
+nav {
+    float: right; 
+    background-color: black;
+    width: 80%;
+    height: 90px; 
+    text-align: right;
+    padding: 20px; 
+}
+
+nav li {
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav li a {
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline 2px crimson;
+    padding-bottom: 2px; 
+}
+
+/*FRONT-PAGE AND ANIMATION*/
+.front-page {
+    background-color: black;
+    height: 100vh;
+    clear: left; 
+    padding-top: 5%; 
+    color: white; 
+}
+
+.front-page h1 {
+    font-size: 10rem;
+    line-height: 130px;
+    padding-left: 110px;
+}
+
+.typing {
+    overflow: hidden;
+      border-right: .1em solid crimson;
+      animation: 
+      typing 1s steps(20, end) forwards;
+      width: 0;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 90% }
+    }
+
+
+
+/*MAIN*/
+
+.content-wrap {
+    margin: 0 5%;    
+    padding-top: 10%;
+
+}
+    /*ABOUT SECTION*/
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    text-align: left;
+    padding-top: 20px; 
+    font-size: 1.2em;
+    padding-bottom: 10%;
+}
+
+.about-container img {
+    max-width: 100%;
+    box-shadow: 10px 10px crimson;
+}
+
+.box {
+    text-decoration: underline 2px crimson;
+    padding-bottom: 10px;
+
+}
+
+    /*EXPERTISE SECTION*/
+#expertise {
+    background-image: url(../images/experise-image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.expertise-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px; 
+    padding-top: 20px;
+    padding-bottom: 10%;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline 2px crimson;
+}
+.expertise-item {
+    border: 3px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+.expertise-item:hover {
+    background-color: whitesmoke;
+    color: black; 
+}
+
+    /*PORTFOLIO*/
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4px;
+    row-gap: 4px;
+    padding-top: 20px;
+    padding-bottom: 10%; 
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+
+#portfolio {
+    margin-left: 1%; 
+}
+
+.portfolio-item {
+    position: relative; 
+}
+
+        /*OVERLAY*/
+.middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: lightgray;
+}
+
+
+.portfolio-item:hover .middle {
+    opacity: 0.8;
+}
+
+.pic-text a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+/*FOOTER*/
+footer {
+    background-color: black;
+    color: white; 
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: crimson; 
+}
+
+footer img {
+    margin: 0 auto; 
+}
+.logo {
+    width: 4%; 
+}
+
+.social {
+    width: 2%;
+}
+
+/*REPONSIVE */
+@media screen and (max-width: 760px){
+
+    .about-container {
+        font-size: 10px; 
+    }
+
+    .front-page h1 {
+        font-size: 5rem;
+        line-height: 90px;
+        padding-left: 10px;
+    }
+
+
+}
+
+@media screen and (max-width: 565px){
+    .expertise-container {
+        display: block;
+        width: 80%;
+        margin: 0 auto; 
+    }
+
+    nav li a {
+        font-size: 15px; 
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    header img {
+        width: 70%;
+    }
+    nav li a{
+        font-size: 10px;
+        padding: 2px;
+
+    }
+    .portfolio-container {
+        display: block;
+    }
+
+}
 
